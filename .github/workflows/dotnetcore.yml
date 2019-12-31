@@ -17,12 +17,22 @@ jobs:
       uses: enricomarino/actions@v2
     - name: Build with dotnet
       run: dotnet build --configuration Release      
-    - name: Publish NuGet
+    - name: Publish syp.biz.SockJS.NET.Client
       uses: rohith/publish-nuget@v1.2.0
       with:
         # Project (csproj) directory path relative from the root of repository
         project_dir: ./syp.biz/SockJS.NET/syp.biz.SockJS.NET.Client
         # Format of the tag to be created, `*` is placeholder for actual version
-        tag_format: v# optional, default is v*
+        tag_format: v # optional, default is v*
         # API key for the NuGet feed
-        # nuget_key: # optional
+        nuget_key: oy2lrklbb5qpspfyf5zaplv35zvqofwuhbdlnbmctxosrq
+      
+    - name: Publish syp.biz.SockJS.NET.Common
+      uses: rohith/publish-nuget@v1.2.0
+      with:
+        # Project (csproj) directory path relative from the root of repository
+        project_dir: ./syp.biz/SockJS.NET/syp.biz.SockJS.NET.Common
+        # Format of the tag to be created, `*` is placeholder for actual version
+        tag_format: v # optional, default is v*
+        # API key for the NuGet feed
+        nuget_key: oy2lrklbb5qpspfyf5zaplv35zvqofwuhbdlnbmctxosrq
