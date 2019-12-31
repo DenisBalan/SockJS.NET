@@ -19,7 +19,7 @@ jobs:
       uses: rohith/publish-nuget@v1.2.0
       with:
         # Project (csproj) directory path relative from the root of repository
-        project_dir: ./syp.biz/SockJS.NET/syp.biz.SockJS.NET.Client/syp.biz.SockJS.NET.Client # optional, default is .
+        project_dir: ./SockJS.NET/syp.biz.SockJS.NET.Client/syp.biz.SockJS.NET.Client # optional, default is .
         # Format of the tag to be created, `*` is placeholder for actual version
         tag_format: v# optional, default is v*
         # API key for the NuGet feed
